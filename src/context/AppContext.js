@@ -24,6 +24,12 @@ export const AppReducer = (state, action) => {
                 return {
                     ...state,
                 };
+            } else if(isNaN(total_budget))
+            {
+                alert("Enter a number");
+                return {
+                    ...state
+                }
             } else {
                 alert("Cannot increase the allocation! Out of funds");
                 return {
@@ -60,6 +66,7 @@ export const AppReducer = (state, action) => {
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
+
 
             return {
                 ...state,
