@@ -33,6 +33,7 @@ const AllocationForm = (props) => {
             }
     };
 
+
     return (
         <div>
             <div className='row'>
